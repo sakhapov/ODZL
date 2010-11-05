@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ZabbixNET.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="zuser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="zhost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://zabbixserver/zabbix</Value>
+    </Setting>
+    <Setting Name="zpass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">zabbix</Value>
+    </Setting>
+    <Setting Name="isfirstrun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

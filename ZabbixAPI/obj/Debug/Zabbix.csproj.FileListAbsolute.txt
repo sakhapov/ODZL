@@ -1,0 +1,20 @@
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\ZabbixAPI.dll
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\ZabbixAPI.pdb
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ResolveAssemblyReference.cache
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ZabbixAPI.dll
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ZabbixAPI.pdb
+D:\!dropbox\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\ZabbixAPI.dll
+D:\!dropbox\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\ZabbixAPI.pdb
+D:\!dropbox\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ResolveAssemblyReference.cache
+D:\!dropbox\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ZabbixAPI.dll
+D:\!dropbox\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ZabbixAPI.pdb
+C:\Documents and Settings\1\Мои документы\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\1\Мои документы\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ZabbixAPI.dll
+C:\Documents and Settings\1\Мои документы\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ZabbixAPI.pdb
+C:\Documents and Settings\1\Мои документы\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\ZabbixAPI.dll
+C:\Documents and Settings\1\Мои документы\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\ZabbixAPI.pdb
+D:\!dropbox\My Dropbox\OZDL\ZabbixAPI\bin\Debug\ZabbixAPI.dll
+D:\!dropbox\My Dropbox\OZDL\ZabbixAPI\bin\Debug\ZabbixAPI.pdb
+D:\!dropbox\My Dropbox\OZDL\ZabbixAPI\obj\Debug\ResolveAssemblyReference.cache
+D:\!dropbox\My Dropbox\OZDL\ZabbixAPI\obj\Debug\ZabbixAPI.dll
+D:\!dropbox\My Dropbox\OZDL\ZabbixAPI\obj\Debug\ZabbixAPI.pdb

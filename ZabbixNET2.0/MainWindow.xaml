@@ -1,0 +1,166 @@
+﻿<Window x:Class="ZabbixNET.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        Title="ZabbixNet 2.0" Height="750" Width="1024" WindowState="Maximized" Icon="/ZabbixNET2.0;component/z-32x32.ico" WindowStartupLocation="Manual" WindowStyle="ThreeDBorderWindow" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Window.Resources>
+      <DataTemplate x:Key="headerArrowUP">
+            <DockPanel>
+                <TextBlock FontWeight="Bold">
+                      <TextBlock.Text>
+                        <Binding/>
+                      </TextBlock.Text>
+                </TextBlock>
+                <Image Stretch="None" Source="/ZabbixNET2.0;component/img/arrowup.jpg" Margin="10,0,0,0"/>
+            </DockPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="headerArrowDown">
+            <DockPanel>
+                <TextBlock FontWeight="Bold">
+                      <TextBlock.Text>
+                        <Binding/>
+                      </TextBlock.Text>
+                      <Image Stretch="None" Source="/ZabbixNET2.0;component/img/arrowdown.jpg" Margin="10,0,0,0" />
+                </TextBlock>
+                
+            </DockPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="ValueCellTemplate">
+            <DockPanel>
+                <Image Name="tmplImg" Stretch="None" Source="/ZabbixNET2.0;component/img/disconnect.png" Margin="0,0,0,0" ToolTip="{Binding value}"/>
+            </DockPanel>
+            <DataTemplate.Triggers>
+            <DataTrigger
+                    Binding="{Binding value}"
+                    Value="0"
+                    >
+                    <Setter TargetName="tmplImg" Property="Source" Value="/ZabbixNET2.0;component/img/connect.png" />
+            </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="trMapItemTemplate">
+            <DockPanel>
+                <Image Source="/ZabbixNET2.0;component/img/map.png" Margin="0,0,3,0"/>
+                <TextBlock VerticalAlignment="center" Text ="{Binding}"/>
+            </DockPanel>
+        </DataTemplate>
+    </Window.Resources>
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="150"/>
+            <ColumnDefinition Width="*" MinWidth="300"/>
+        </Grid.ColumnDefinitions>
+
+        <TabControl Margin="3,0,0,0" Name="tabControl1" Grid.Column="1" Grid.Row="1">
+            <TabItem Header="Maps" IsSelected="True" >
+                <Grid Margin="0,0,0,0" >
+                    <ScrollViewer Background="White" CanContentScroll="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Name="Scroller">
+                        <Canvas Name="mapCanvas" Margin="0,0,0,0" Width="2000" Height="2000" Background="White" MouseRightButtonDown="mapCanvas_MouseDown" MouseMove="map_MouseMove" ContextMenuOpening="mapCanvas_ContextMenuOpening" MouseWheel="mapCanvas_MouseWheel" HorizontalAlignment="Left" VerticalAlignment="Top" ClipToBounds="False" IsManipulationEnabled="True" MouseDown="mapCanvas_MouseDown_1" MouseUp="mapCanvas_MouseUp">
+                            <Canvas.ContextMenu>
+                                <ContextMenu>
+                                </ContextMenu>
+                            </Canvas.ContextMenu>
+                        </Canvas>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem  Header="Log">
+                <Grid >
+                    <ListView HorizontalAlignment="Stretch" Margin="0" Name="vLog" VerticalAlignment="Stretch">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn  DisplayMemberBinding="{Binding time}" >
+                                    <GridViewColumnHeader 
+                                                     Tag="time" 
+                                                     Content="Время" />
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding sender}" >
+                                    <GridViewColumnHeader 
+                                                     Tag="sender" 
+                                                     Content="Источник события" />
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding status}" >
+                                    <GridViewColumnHeader 
+                                                     Tag="status" 
+                                                     Content="Тип" />
+                                </GridViewColumn>
+                                <GridViewColumn  DisplayMemberBinding="{Binding message}" >
+                                    <GridViewColumnHeader 
+                                                     Tag="message" 
+                                                     Content="Описание" />
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem  Header="Triggers">
+                <Grid Name="grid1">
+                    <ListView HorizontalAlignment="Stretch" Margin="0" Name="vTriggers" VerticalAlignment="Stretch"  GridViewColumnHeader.Click="vTriggers_Click">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn  CellTemplate="{StaticResource ValueCellTemplate}" >
+                                    <GridViewColumnHeader 
+                                                     Tag="value" 
+                                                      />
+                                </GridViewColumn>
+                                <GridViewColumn  DisplayMemberBinding="{Binding lastchangeDateTime}" >
+                                    <GridViewColumnHeader 
+                                                     Tag="lastchangeDateTime" 
+                                                     Content="Время" />
+                                </GridViewColumn>
+                                <GridViewColumn  DisplayMemberBinding="{Binding host}" >
+                                <GridViewColumnHeader 
+                                                     Tag="host" 
+                                                     Content="Хост" />
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding expression}" >
+                                    <GridViewColumnHeader 
+                                                     Tag="expression" 
+                                                     Content="Выражение" />
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding description}" >
+                                    <GridViewColumnHeader 
+                                                     Tag="description" 
+                                                     Content="Описание" />
+                                </GridViewColumn>
+                                <GridViewColumn  DisplayMemberBinding="{Binding status}" >
+                                    <GridViewColumnHeader 
+                                                     Tag="status" 
+                                                     Content="Статус" />
+                                </GridViewColumn>
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+        <GridSplitter HorizontalAlignment="Left" Name="gridSplitter1" Width="3" ShowsPreview="False" Grid.Column="1" Grid.RowSpan="1" Grid.Row="1"/>
+        <TreeView Name="MainTree" Grid.Row="1">
+            <TreeViewItem Name="trMaps" Header="Карты"  IsExpanded="True" />
+            <TreeViewItem Name="trTriggers" Header="Триггеры" />
+            <TreeViewItem Name="trHosts" Header="Узлы сети" />
+        </TreeView>
+        <StatusBar Grid.ColumnSpan="2" Grid.Row="2" Name="statusBar1">
+            <StatusBarItem Name="Status" Content="" />
+            <StatusBarItem Name="Index" Content="" />
+            <StatusBarItem Name="errors" Content="" />
+        </StatusBar>
+        <WrapPanel Name="wrapPanel1" Grid.ColumnSpan="2">
+            <Button Content="Connect" Height="28" Name="btnLogin" Click="btnLogin_Click" Width="58" IsEnabled="False" />
+            <Button Content="Version" Height="27" Name="btnVerion" Click="btnVerion_Click"  />
+            <Button Content="Настройки" Height="27" Name="button1" Click="btnSettings_click" />
+
+        </WrapPanel>
+    </Grid>
+</Window>

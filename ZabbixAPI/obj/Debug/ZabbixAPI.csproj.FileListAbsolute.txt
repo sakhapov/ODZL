@@ -1,0 +1,10 @@
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\ZabbixAPI.dll
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\ZabbixAPI.pdb
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\Newtonsoft.Json.pdb
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\Newtonsoft.Json.xml
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ResolveAssemblyReference.cache
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ZabbixAPI.dll
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\obj\Debug\ZabbixAPI.pdb
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\notify.dll
+D:\Laletin\My Dropbox\projects\ZabbixNet2\ZabbixNET2.0\ZabbixAPI\bin\Debug\notify.pdb

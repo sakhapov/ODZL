@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="ZabbixNET.MapVisualElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Background="{x:Null}" MouseMove="UserControl_MouseMove" Initialized="UserControl_Initialized" LayoutUpdated="UserControl_LayoutUpdated" xmlns:my="clr-namespace:ZabbixNET">
+    <Canvas>
+        <Rectangle Height="65" HorizontalAlignment="Left" Name="bgrd" Stroke="{x:Null}" VerticalAlignment="Top" Width="60" RadiusX="8" RadiusY="8" StrokeThickness="2">
+        <Rectangle.Fill>
+            <LinearGradientBrush  EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Offset="0" />
+                    <GradientStop Offset="1" />
+            </LinearGradientBrush>
+        </Rectangle.Fill>
+    </Rectangle>
+        <Label Canvas.Left="12" Canvas.Top="45" Content="Label" Name="label" Foreground="White" HorizontalAlignment="Center" FontStyle="Normal" FontWeight="Normal" Background="{x:Null}" FontSize="10" />
+        <Image Canvas.Left="6" Canvas.Top="0" Height="48" Width="48" Name="image" Stretch="Fill"  />
+        <Label Canvas.Left="2" Canvas.Top="2" Content="Label" Height="12" Name="eType" Width="58" />
+    </Canvas>
+    <UserControl.ToolTip>
+        <StackPanel>
+            <ListBox Name="tltp" Background="#00000000" BorderBrush="#00000000">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <DockPanel Background="#00000000">
+                            <Image Stretch="Fill" Name="tmplImg"  Height="{Binding}"  Source="/ZabbixNET2.0;component/img/disconnect.png" Margin="0,0,3,0" ToolTip="{Binding value}"/>
+                            <TextBlock Name="tmplText" Text="{Binding text}" Height="{Binding ElementName=tmplText, Path=ActualHeight}" />
+                        </DockPanel>
+                        <DataTemplate.Triggers>
+                            <DataTrigger
+                                Binding="{Binding value}"
+                                Value="0"
+                                >
+                                <Setter TargetName="tmplImg" Property="Source" Value="/ZabbixNET2.0;component/img/connect.png" />
+                            </DataTrigger>
+                        </DataTemplate.Triggers>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </UserControl.ToolTip>
+</UserControl>
